@@ -57,17 +57,17 @@ function Navbar({ handleToggle }) {
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
       </div> */}
-      <nav className="hidden text-slate-400 text-xl space-x-10 lg:block opacity-0 -translate-y-10" ref={navbar}>
-        <a className="hover:text-slate-50" href="">
+      <nav className="hidden text-slate-50 text-xl space-x-10 lg:block opacity-0 -translate-y-10" ref={navbar}>
+        <a className="hover:text-slate-400" href="">
           Index
         </a>
-        <a className="hover:text-slate-50" href="">
+        <a className="hover:text-slate-400" href="">
           About me
         </a>
-        <a className="hover:text-slate-50" href="">
+        <a className="hover:text-slate-400" href="">
           Projects
         </a>
-        <a className="hover:text-slate-50" href="">
+        <a className="hover:text-slate-400" href="">
           Contact
         </a>
       </nav>

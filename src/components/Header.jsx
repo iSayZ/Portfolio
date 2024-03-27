@@ -4,6 +4,7 @@ import { useState } from "react";
 import Test from "./Test";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import Rec from "./Rec";
 
 function Header() {
 
@@ -29,7 +30,9 @@ function Header() {
 
     return (
         // bg-svg
-        <div className="bg-sky-950 bg-svg w-screen">
+        // bg-sky-950 bg-svg w-screen
+        <div className="bg-sky-950">
+            <Rec />
             <Navbar handleToggle={handleToggle} />
             {isVisible && <BurgerMenu handleToggle={handleToggle} burgerMenu={burgerMenu} />}
             <Test />
