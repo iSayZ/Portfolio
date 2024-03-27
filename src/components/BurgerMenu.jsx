@@ -1,6 +1,7 @@
-function BurgerMenu({ handleToggle }) {
+function BurgerMenu({ handleToggle, burgerMenu }) {
+  
   return (
-    <div className="h-screen w-screen absolute top-0 bg-sky-900 opacity-95 backdrop-blur flex justify-center">
+    <div className="h-screen w-screen absolute top-0 bg-sky-900 opacity-0 backdrop-blur flex justify-center -translate-x-full " ref={burgerMenu}>
       <div className="flex flex-col justify-center items-center text-slate-400 text-3xl space-y-6">
         <a className="hover:text-slate-50 hover:scale-110" href="">
           Index

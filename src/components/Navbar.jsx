@@ -1,4 +1,20 @@
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+
 function Navbar({ handleToggle }) {
+
+  const navbar = useRef(null);
+
+  useEffect(() => {
+    gsap.to(navbar.current, {
+      opacity: 1,
+      y: 0,
+      duration: 2
+    })
+  }, [])
+
+
+
   return (
     <div className="w-screen flex justify-between items-center h-1/6 p-3 lg:justify-center">
       <div
@@ -41,7 +57,7 @@ function Navbar({ handleToggle }) {
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
       </div> */}
-      <nav className="hidden text-slate-400 text-xl space-x-10 lg:block">
+      <nav className="hidden text-slate-400 text-xl space-x-10 lg:block opacity-0 -translate-y-10" ref={navbar}>
         <a className="hover:text-slate-50" href="">
           Index
         </a>
