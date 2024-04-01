@@ -3,7 +3,7 @@ function Contact() {
 
 
     return (
-        <div className="bg-slate-200 w-full flex justify-center py-8 px-4">
+        <div className="bg-slate-200 w-full flex justify-center py-12 px-4">
             <div className="bg-slate-900 opacity-80 p-8 rounded shadow-black shadow-sm flex flex-col items-center justify-center w-full md:w-4/6 md:flex-row md:flex-wrap">
                 <h3 className="font-semibold text-xl text-slate-50 mb-2 text-center md:mr-2 lg:text-1xl">Une question ?</h3>
                 <h3 className="font-semibold text-xl text-slate-50 mb-2 text-center lg:text-1xl">Un projet à me proposer ?</h3>
