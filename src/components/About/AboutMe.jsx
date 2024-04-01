@@ -11,8 +11,8 @@ function AboutMe() {
     }
 
     return (
-        <div id='about-me' className="bg-slate-200 w-full h-full py-12 lg:p-12 lg:px-40">
-            <div className="text-center ">
+        <div id='about-me' className="bg-slate-200 w-full h-full py-12 lg:py-20 lg:p-12 lg:px-40">
+            <div className="text-center">
                 <h1 className="text-3xl font-semibold text-cyan-500 m-0">Qui suis-je ?</h1>
                 <p className="m-12">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure harum vero odit delectus eaque, optio mollitia nostrum omnis officia quibusdam repellat consequatur ad reiciendis enim culpa iusto nemo temporibus vel!

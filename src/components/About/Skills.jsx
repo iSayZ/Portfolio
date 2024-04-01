@@ -42,7 +42,7 @@ function Skills() {
 
   return (
     <div className="bg-slate-200 md:flex md:justify-center">
-      <div className="bg-cyan-500 pt-8 border-t-2 border-b-2 rounded-md border-white md:w-4/6 md:rounded-md md:border-2 md:border-transparent md:shadow-sm md:shadow-black mb-10">
+      <div className="bg-cyan-500 pt-8 border-t-2 border-b-2 rounded-md border-white md:w-4/6 md:rounded-md md:border-2 md:border-transparent md:shadow-sm md:shadow-black">
         <h2 className="text-2xl font-semibold text-center text-slate-50">Technologies maitrisées</h2>  
         <Carrousel skillsIcons={skillsIcons} />
       </div>
