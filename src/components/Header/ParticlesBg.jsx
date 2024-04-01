@@ -1,27 +1,24 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { loadSlim } from "@tsparticles/slim"; 
+import { gsap } from 'gsap';
+import './particles.css'
 
-const Rec = () => {
-  const [init, setInit] = useState(false);
-
-  // this should be run only once per application lifetime
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
-      await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+const ParticlesBg = () => {
+    const [init, setInit] = useState(false);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        initParticlesEngine(async (engine) => {
+          await loadSlim(engine);
+        }).then(() => {
+          setInit(true);
+        });
+      }, 3000); 
+  
+      return () => clearTimeout(timer);
+  
+    }, []);
 
   const particlesLoaded = (container) => {
     console.log(container);
@@ -34,6 +31,7 @@ const Rec = () => {
           value: "#082f49",
         },
       },
+
       fpsLimit: 60,
       interactivity: {
         events: {
@@ -81,7 +79,7 @@ const Rec = () => {
           density: {
             enable: true,
           },
-          value: 100,
+          value: 80,
         },
         opacity: {
           value: 0.5,
@@ -95,20 +93,24 @@ const Rec = () => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
   if (init) {
     return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+      <div>
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+      </div>
     );
   }
 
-  return <></>;
+  return (
+    <></>
+  )
 };
 
-export default Rec;
+export default ParticlesBg;

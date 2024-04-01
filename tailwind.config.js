@@ -8,7 +8,11 @@ export default {
     fontFamily: {
       'sans': 'Encode Sans Semi Condensed, sans-serif',
     },
-    extend: {},
+    extend: {
+      width: {
+        '45%': '45%',
+      }
+    },
   },
   plugins: [],
 }

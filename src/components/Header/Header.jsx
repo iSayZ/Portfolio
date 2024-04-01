@@ -1,10 +1,10 @@
 import BurgerMenu from "./BurgerMenu";
 import Navbar from "./Navbar";
 import { useState } from "react";
-import Test from "./Test";
+import Homepage from "./Homepage";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import Rec from "./Rec";
+import ParticlesBg from "./ParticlesBg";
 
 function Header() {
 
@@ -16,26 +16,29 @@ function Header() {
 
     const burgerMenu = useRef(null);
 
-    console.log(`ici => ${burgerMenu}`)
-
     useEffect(() => {
-        console.log(`ici 2 => ${burgerMenu}`)
-        isVisible &&
+        isVisible ?
         gsap.to(burgerMenu.current, {
             opacity: 0.95,
             x: 0,
             duration: 1
         })
+        :
+        gsap.to(burgerMenu.current, {
+            opacity: 0.95,
+            x: `-100%`,
+            duration: 1
+        })
     }, [isVisible])
 
+
+
     return (
-        // bg-svg
-        // bg-sky-950 bg-svg w-screen
-        <div className="bg-sky-950">
-            <Rec />
+        <div className="bg-sky-950 w-full">
+            {/* <ParticlesBg /> */}
             <Navbar handleToggle={handleToggle} />
-            {isVisible && <BurgerMenu handleToggle={handleToggle} burgerMenu={burgerMenu} />}
-            <Test />
+            <BurgerMenu handleToggle={handleToggle} burgerMenu={burgerMenu} />
+            <Homepage />
         </div>
     )
 }

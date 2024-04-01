@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {  
+  scroll-behavior: smooth;
+}
+
 .encode-sans semi condensed-thin {
   font-family: "Encode Sans Semi Condensed", sans-serif;
   font-weight: 100;
@@ -55,9 +59,3 @@
   font-weight: 900;
   font-style: normal;
 }
-
-.bg-svg {
-  background-image: url('../assets/Hexagon.svg');
-}
-
-
