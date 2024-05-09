@@ -1,10 +1,32 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+
 function Contact() {
 
+    gsap.registerPlugin(ScrollTrigger);
 
+    useEffect(() => {
+        gsap.fromTo("#form", {
+          opacity: 0,
+          y: 10
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: "#contact",
+              start: "top center",
+              end: "bottom center",
+              markers: false
+          }      
+        })
+    }, [])
 
     return (
-        <div className="bg-slate-200 w-full flex justify-center py-12 px-4 lg:py-20">
-            <div className="bg-slate-900 opacity-80 p-8 rounded shadow-black shadow-sm flex flex-col items-center justify-center w-full md:w-4/6 md:flex-row md:flex-wrap">
+        <div id="contact" className="bg-slate-200 w-full flex justify-center py-12 px-4 lg:py-20">
+            <div id="form" className="bg-slate-900 opacity-80 p-8 rounded shadow-black shadow-sm flex flex-col items-center justify-center w-full md:w-4/6 md:flex-row md:flex-wrap">
                 <h3 className="font-semibold text-xl text-slate-50 mb-2 text-center md:mr-2 lg:text-1xl">Une question ?</h3>
                 <h3 className="font-semibold text-xl text-slate-50 mb-2 text-center lg:text-1xl">Un projet à me proposer ?</h3>
                 <h2 className="font-semibold text-3xl text-orange-500 mb-10 text-center md:w-full md:mt-2 lg:text-4xl">Contactez moi !</h2>

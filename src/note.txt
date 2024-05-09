@@ -1,0 +1,8 @@
+      <Header />
+      {/* <div className="absolute z-1"> */}
+      <AboutMe />
+      {/* </div> */}
+      <MyProjects />
+      <Contact />
+      <Footer />
+      <TopBtn ref={topBtn} />

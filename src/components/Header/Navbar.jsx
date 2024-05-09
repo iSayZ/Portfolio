@@ -16,7 +16,7 @@ function Navbar({ handleToggle }) {
 
 
   return (
-    <div id="top" className="w-screen flex justify-between items-center h-1/6 p-3 lg:justify-center relative">
+    <div id="top" className="w-full flex justify-between items-center h-1/6 p-3 lg:justify-center relative">
       <div
         onClick={handleToggle}
         className="lg:hidden ml-3 p-0.5 hover:bg-sky-900 hover:rounded hover:shadow-md active:rotate-90 transition-all ease-in-out duration-200"
@@ -36,16 +36,16 @@ function Navbar({ handleToggle }) {
         </svg>
       </div>
       <nav className="hidden text-slate-50 text-xl space-x-10 lg:block opacity-0 -translate-y-10" ref={navbar}>
-        <a className="hover:text-slate-400 inline-block hover:scale-105" href="">
+        <a className="hover:text-slate-400 inline-block hover:scale-105" href="#top">
           Index
         </a>
         <a className="hover:text-slate-400 inline-block hover:scale-105" href="#about-me">
           About me
         </a>
-        <a className="hover:text-slate-400 inline-block hover:scale-105" href="">
+        <a className="hover:text-slate-400 inline-block hover:scale-105" href="#my-projects">
           Projects
         </a>
-        <a className="hover:text-slate-400 inline-block hover:scale-105" href="">
+        <a className="hover:text-slate-400 inline-block hover:scale-105" href="#contact">
           Contact
         </a>
       </nav>
