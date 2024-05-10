@@ -2,6 +2,7 @@ import "./App.css";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MainProvider } from "./contexts/Context";
 import Header from "./components/Header/Header";
 import AboutMe from "./components/About/AboutMe";
 import Contact from "./components/Contact/Contact";
@@ -35,14 +36,17 @@ function App() {
 
   return (
     <>
-      <Header />
-      {/* <div className="absolute z-1"> */}
-      <AboutMe />
-      {/* </div> */}
-      <MyProjects />
-      <Contact />
-      <Footer />
-      <TopBtn ref={topBtn} />    </>  
+      <MainProvider>
+        <Header />
+        {/* <div className="absolute z-1"> */}
+        <AboutMe />
+        {/* </div> */}
+        <MyProjects />
+        <Contact />
+        <Footer />
+        <TopBtn ref={topBtn} />     
+      </MainProvider>
+    </>  
   );
 }
 

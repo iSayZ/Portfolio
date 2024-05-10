@@ -100,7 +100,7 @@ function AboutMe() {
                 Voluptas odio nostrum, quae labore unde exercitationem dolorem numquam nam magnam reprehenderit, excepturi mollitia itaque animi tenetur! Debitis, aliquid provident deserunt nulla delectus, accusamus dolor saepe laborum, optio itaque blanditiis?
                 Velit reiciendis, et enim dolorum eum nostrum assumenda amet neque soluta animi beatae vero architecto culpa est doloremque? Inventore mollitia cum velit? Doloribus pariatur provident necessitatibus error, vel sint et?
                 </p>
-                <a target='_blank' href="../public/assets/CV_Alexis_Estrine.pdf">
+                <a target='_blank' href="https://drive.google.com/file/d/1iFZXXkv7Cxj5rTLxZ4uw3EUzjk4_HF1y/view?usp=sharing">
                 <button ref={btn} className='mb-12 bg-orange-500 p-2 text-slate-50 font-semibold rounded shadow-black shadow-sm active:shadow-none hover:scale-105'>Voir mon CV</button>
                 </a>
             </div>
