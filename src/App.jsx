@@ -38,13 +38,11 @@ function App() {
     <>
       <MainProvider>
         <Header />
-        {/* <div className="absolute z-1"> */}
         <AboutMe />
-        {/* </div> */}
         <MyProjects />
         <Contact />
         <Footer />
-        <TopBtn ref={topBtn} />     
+        <TopBtn topBtn={topBtn} />     
       </MainProvider>
     </>  
   );

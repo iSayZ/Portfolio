@@ -25,11 +25,11 @@ module.exports = withMT({
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      width: {
+                '45%': '45%',
+              },
       colors: {
-        // Importer la couleur "sky" avec toutes ses teintes
         sky: colors.sky,
-        
-        // Importer la couleur "slate" avec toutes ses teintes
         slate: colors.slate,
       },
     },

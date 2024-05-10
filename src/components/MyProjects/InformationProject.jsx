@@ -4,13 +4,15 @@ function InformationProject ({ project, closePopup, informationProject }) {
 
     return (
         <div className="fixed top-0 bottom-0 left-0 right-0 z-50 min-h-screen w-full overflow-auto translate-x-full" ref={informationProject}>
-            <div className=" bg-slate-50 h-full w-full rounded relative flex flex-col items-center justify-center px-4 pt-12 space-y-6 overflow-auto">
-                <div onClick={closePopup} className="absolute top-0 py-2 w-full flex justify-between items-center bg-slate-100 border-b border-slate-800">
-                <h3 className={`ml-2 text-3xl font-semibold text-${project.color.other}-500`}>{project.name}</h3>
-                    <img src="../assets/images/icons/exit-btn-red.svg" alt="" className="hover:scale-110"/>
+            <div className=" bg-slate-50 h-full w-full rounded relative flex flex-col items-center justify-center px-4 pt-12 space-y-6 overflow-auto lg:flex-row lg:flex-wrap lg:justify-evenly">
+                <div className="absolute top-0 py-2 w-full flex justify-between items-center bg-slate-100 shadow">
+                    <h3 className={`ml-2 text-3xl font-semibold text-${project.color.other}-500 lg:text-5xl`}>{project.name}</h3>
+                    <button onClick={closePopup}>
+                        <img src="../assets/images/icons/exit-btn-red.svg" alt="" className="mr-1 hover:bg-black/20 hover:rounded-md lg:h-14"/>
+                    </button>
                 </div>
-                <a href={project.src} target="_blank" className="underline decoration-solid hover:opacity-50">Accéder au site vitrine</a>
-                <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none"
+                <a href={project.src} target="_blank" className="underline decoration-solid hover:opacity-50 lg:w-full lg:text-center lg:text-xl">Accéder au site vitrine</a>
+                <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none lg:w-45%"
                 autoplay="true"
                 autoplayDelay="10000"
                 navigation={({ setActiveIndex, activeIndex, length }) => (
@@ -56,30 +58,31 @@ function InformationProject ({ project, closePopup, informationProject }) {
                         <img key={index} src={img} onClick={() => setImgSelect(index)} alt="" />
                 )}
                 </Carousel>
-                <p className="text-l text-center">{project.desc}</p>
-                <hr className={`w-1/3 bg-${project.color.other}-500 h-1`}/>
-                <div>
-                    <h2 className="text-center mb-4">
-                        Technologies utilisées :
-                    </h2>
-                    <div className="flex flex-wrap justify-center">
-                    {project.techno.map((techno, index) =>
-                        <button key={`${techno} + ${index}`} className={`p-2 m-2 bg-${project.color.other}-500`}>{techno}</button>
-                    )}
+                <div className="space-y-6 flex flex-col items-center justify-center lg:w-45%">
+                    <p className="text-l text-center lg:w-2/3">{project.desc}</p>
+                    <hr className={`w-1/3 bg-${project.color.other}-500 h-1`}/>
+                    <div className="lg:w-2/3">
+                        <h2 className="text-center mb-4">
+                            Technologies utilisées :
+                        </h2>
+                        <div className="flex flex-wrap justify-center">
+                        {project.techno.map((techno, index) =>
+                            <button key={`${techno} + ${index}`} className={`p-2 m-2 bg-${project.color.other}-500`}>{techno}</button>
+                        )}
+                        </div>
                     </div>
-                </div>
-                <hr className={`w-1/3 bg-${project.color.other}-500 h-1`}/>
-                <div className="space-y-2">
-                    <div className="flex items-center">
-                        <img src="../assets/images/icons/calendar.png" alt="" className="h-6 w-6 mr-2" />
-                        <p>Date de création : <span className={`font-medium text-${project.color.other}-500`}>{project.date}</span></p>
-                    </div>
-                    {project.time && 
+                    <hr className={`w-1/3 bg-${project.color.other}-500 h-1`}/>
+                    <div className="space-y-2">
                         <div className="flex items-center">
-                        <img src="../assets/images/icons/timer.png" alt="" className="h-6 w-6 mr-2" />
-                        <p>Temps de réalisation : <span className={`font-medium text-${project.color.other}-500`}>{project.time}</span></p>
-                    </div>}
-
+                            <img src="../assets/images/icons/calendar.png" alt="" className="h-6 w-6 mr-2" />
+                            <p>Date de création : <span className={`font-medium text-${project.color.other}-500`}>{project.date}</span></p>
+                        </div>
+                        {project.time && 
+                            <div className="flex items-center">
+                            <img src="../assets/images/icons/timer.png" alt="" className="h-6 w-6 mr-2" />
+                            <p>Temps de réalisation : <span className={`font-medium text-${project.color.other}-500`}>{project.time}</span></p>
+                        </div>}
+                    </div>
                 </div>
          </div>
         </div>

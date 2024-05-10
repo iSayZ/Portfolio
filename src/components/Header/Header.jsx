@@ -21,13 +21,13 @@ function Header() {
         gsap.to(burgerMenu.current, {
             opacity: 0.95,
             x: 0,
-            duration: 1
+            duration: 0.7
         })
         :
         gsap.to(burgerMenu.current, {
             opacity: 0.95,
             x: `-100%`,
-            duration: 1
+            duration: 0.7
         })
     }, [isVisible])
 

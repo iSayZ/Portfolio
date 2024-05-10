@@ -15,13 +15,13 @@ function MyProjects() {
         gsap.to(informationProject.current, {
             opacity: 1,
             x: 0,
-            duration: 1
+            duration: 0.7
         })
         :
         gsap.to(informationProject.current, {
             opacity: 1,
             x: `100%`,
-            duration: 1
+            duration: 0.7
         })
     }, [isPopupOpen])
 
@@ -76,11 +76,13 @@ function MyProjects() {
 
     return (
         <>
-            <div id='my-projects' className="bg-cyan-500 w-full p-4 py-8 flex flex-col items-center md:flex-row md:justify-evenly md:flex-wrap">
-                <h1 className="text-slate-100 text-3xl font-semibold mb-8">Mes projets</h1>
-                {projects.map((project, index) => 
-                        <ProjectContainer key={`${project.name} + ${index}`} project={project} openPopup={() => openPopup(index)} />
-                )}
+            <div id='my-projects' className="bg-cyan-500 w-full p-4 py-8 ">
+                <h1 className="text-slate-100 text-3xl font-semibold mb-8 text-center">Mes projets</h1>
+                <div className="lg:flex lg:flex-wrap lg:justify-evenly lg:space-x-4">
+                    {projects.map((project, index) => 
+                            <ProjectContainer key={`${project.name} + ${index}`} project={project} openPopup={() => openPopup(index)} />
+                    )}
+                </div>
             </div>
             {isPopupOpen && <InformationProject project={projects[projectSelect]} closePopup={closePopup} informationProject={informationProject} />}
         </>
