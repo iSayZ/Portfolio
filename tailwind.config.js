@@ -24,6 +24,9 @@ const colors = require('tailwindcss/colors')
 module.exports = withMT({
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+            'sans': 'Encode Sans Semi Condensed, sans-serif',
+          },
     extend: {
       width: {
                 '45%': '45%',

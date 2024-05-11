@@ -9,6 +9,8 @@ function MyProjects() {
     const { openPopup, closePopup, isPopupOpen, projectSelect } = useMain();
 
     const informationProject = useRef(null);
+    const title = useRef(null);
+    const projectRefs = useRef([]);
 
     useEffect(() => {
         isPopupOpen ?
@@ -24,6 +26,51 @@ function MyProjects() {
             duration: 0.7
         })
     }, [isPopupOpen])
+
+    useEffect(() => {
+
+        gsap.fromTo(
+            title.current,
+            {
+                opacity: 0,
+                y: 10,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                delay: 0.5,
+                duration: 0.7,
+                scrollTrigger: {
+                    trigger: `#skills`,
+                    start: "top center",
+                    end: "top center",
+                    markers: false,
+                },
+            }
+            );
+
+        projectRefs.current.forEach((ref, index) => {
+            gsap.fromTo(
+                ref,
+                {
+                    opacity: 0,
+                    y: 10,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    delay: index * 0.5, // Délai pour chaque projet
+                    duration: 0.7,
+                    scrollTrigger: {
+                        trigger: `#my-projects`,
+                        start: "top center",
+                        end: "top center",
+                        markers: false,
+                    },
+                }
+            );
+        });
+    }, [])
 
     const projects = [
         {
@@ -76,12 +123,21 @@ function MyProjects() {
 
     return (
         <>
-            <div id='my-projects' className="bg-cyan-500 w-full p-4 py-8 ">
-                <h1 className="text-slate-100 text-3xl font-semibold mb-8 text-center">Mes projets</h1>
+            <div id='my-projects' className="bg-cyan-500 w-full px-4 py-12 lg:py-20">
+                <h1 ref={title} className="text-slate-100 text-4xl font-semibold mb-12 lg:mb-16 text-center">Mes projets</h1>
                 <div className="lg:flex lg:flex-wrap lg:justify-evenly lg:space-x-4">
-                    {projects.map((project, index) => 
-                            <ProjectContainer key={`${project.name} + ${index}`} project={project} openPopup={() => openPopup(index)} />
-                    )}
+                    {projects.map((project, index) => (
+                        // div provenant du composant ProjectContainer pour assurer le maintien de l'animation
+                        <div className="mb-8 flex flex-col items-center bg-slate-900/50 rounded shadow-xl overflow-hidden lg:w-45% lg:flex-none"
+                            key={`${project.name}-${index}`}
+                            ref={(element) => (projectRefs.current[index] = element)} // Ajout de la référence pour chaque projet
+                        >
+                            <ProjectContainer
+                                project={project}
+                                openPopup={() => openPopup(index)}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
             {isPopupOpen && <InformationProject project={projects[projectSelect]} closePopup={closePopup} informationProject={informationProject} />}

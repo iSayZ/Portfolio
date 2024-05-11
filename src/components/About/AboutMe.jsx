@@ -3,7 +3,6 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Skills from "./Skills.jsx";
-import CV from "./CV.jsx";
 
 function AboutMe() {
   gsap.registerPlugin(ScrollTrigger);
@@ -42,7 +41,7 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 1,
+        delay: 0.5,
         duration: 1,
         scrollTrigger: {
           trigger: "#about-me",
@@ -62,7 +61,7 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 2,
+        delay: 1,
         duration: 1,
         scrollTrigger: {
           trigger: "#about-me",
@@ -82,11 +81,11 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 0,
+        delay: 1.5,
         duration: 1,
         scrollTrigger: {
-          trigger: aboutMe.current,
-          start: "bottom center",
+          trigger: "#about-me",
+          start: "top center",
           end: "bottom center",
           markers: false,
         },
@@ -106,10 +105,10 @@ function AboutMe() {
       className="bg-slate-200 w-full h-full py-12 lg:py-20 lg:p-12 lg:px-40"
     >
       <div className="text-center">
-        <h1 ref={title} className="text-3xl font-semibold text-cyan-500 m-0">
+        <h1 ref={title} className="text-4xl font-semibold text-cyan-500 m-0">
           Qui suis-je ?
         </h1>
-        <div ref={aboutMe} className="m-8 space-y-4">
+        <div ref={aboutMe} className="m-8 space-y-4 lg:leading-7 lg:text-l">
           <p>
           Passionné de technologie depuis toujours, je transforme aujourd'hui ma
           passion en devenant développeur web grâce à ma formation à la Wild
@@ -145,7 +144,6 @@ function AboutMe() {
           </button>
         </a>
       </div>
-      {/* {isVisible && <CV handleToggle={handleToggle} />} */}
       <Skills skills={skills} />
     </div>
   );
