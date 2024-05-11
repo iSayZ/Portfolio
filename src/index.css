@@ -60,3 +60,7 @@ html {
   font-style: normal;
 }
 
+.bounce {
+  animation: bounce 1s 1;
+}
+

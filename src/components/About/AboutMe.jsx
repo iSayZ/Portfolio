@@ -81,10 +81,10 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 1.5,
+        delay: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: "#about-me",
+          trigger: "#about-end",
           start: "top center",
           end: "bottom center",
           markers: false,
@@ -131,6 +131,7 @@ function AboutMe() {
           contacter si mon profil vous intéresse, au plaisir de vous rencontrer
           ! ✌️
           </p>
+          <span id="about-end"></span>
           </div>        
         <a
           target="_blank"

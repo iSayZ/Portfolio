@@ -71,8 +71,8 @@ function Homepage() {
                 {socialNetwork.map((network) => <Button key={network.name} btn={network} />)}
             </div>
             </div>
-            <div>
-                <img src="../../assets/profil.jpg" alt="" ref={avatar} className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full h-48 w-48 md:h-64 md:w-64 md:m-0 opacity-0 translate-y-5" />
+            <div className="hover:animate-bounce">
+                <img src="../../assets/profil.jpg" alt="" ref={avatar} className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full h-48 w-48 opacity-0 md:h-64 md:w-64 md:m-0 translate-y-5" />
             </div>
             </div>
         </>

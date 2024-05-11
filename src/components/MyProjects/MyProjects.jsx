@@ -42,8 +42,8 @@ function MyProjects() {
                 duration: 0.7,
                 scrollTrigger: {
                     trigger: `#skills`,
-                    start: "top center",
-                    end: "top center",
+                    start: "center center",
+                    end: "center center",
                     markers: false,
                 },
             }

@@ -1,9 +1,15 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
+import { useState } from "react";
+import Gallery from "./Gallery";
 
 function InformationProject ({ project, closePopup, informationProject }) {
 
+  const [active, setActive] = useState(
+    "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+  );
+
     return (
-        <div className="fixed top-0 bottom-0 left-0 right-0 z-50 min-h-screen w-full overflow-auto translate-x-full" ref={informationProject}>
+        <div className="fixed top-0 bottom-0 left-0 right-0 z-40 min-h-screen w-full overflow-auto translate-x-full" ref={informationProject}>
             <div className=" bg-slate-50 h-full w-full rounded relative flex flex-col items-center justify-center px-4 pt-12 space-y-6 overflow-auto lg:flex-row lg:flex-wrap lg:justify-evenly">
                 <div className="absolute top-0 py-2 w-full flex justify-between items-center bg-slate-100 shadow">
                     <h3 className={`ml-2 text-3xl font-semibold text-${project.color.other}-500 lg:text-5xl`}>{project.name}</h3>
@@ -85,6 +91,7 @@ function InformationProject ({ project, closePopup, informationProject }) {
                     </div>
                 </div>
          </div>
+        {/* <Gallery project={project}/> */}
         </div>
     )
 }
