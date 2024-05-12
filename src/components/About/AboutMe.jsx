@@ -3,6 +3,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Skills from "./Skills.jsx";
+import { Button } from "@material-tailwind/react";
 
 function AboutMe() {
   gsap.registerPlugin(ScrollTrigger);
@@ -133,17 +134,11 @@ function AboutMe() {
           </p>
           <span id="about-end"></span>
           </div>        
-        <a
-          target="_blank"
-          href="https://drive.google.com/file/d/1iFZXXkv7Cxj5rTLxZ4uw3EUzjk4_HF1y/view?usp=sharing"
-        >
-          <button
-            ref={btn}
-            className="mb-12 bg-orange-500 p-2 text-slate-50 font-semibold rounded shadow-black shadow-sm active:shadow-none hover:scale-105"
-          >
-            Voir mon CV
-          </button>
-        </a>
+          <a href="https://drive.google.com/file/d/1iFZXXkv7Cxj5rTLxZ4uw3EUzjk4_HF1y/view?usp=sharing" target="_blank" className="block mb-12">
+                  <Button variant="gradient" color="orange">
+                    Voir mon CV
+                  </Button>
+                </a>
       </div>
       <Skills skills={skills} />
     </div>

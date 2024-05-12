@@ -91,7 +91,7 @@ function Carrousel({ skillsIcons }) {
         </IconButton>
       )}>
 {skillsIcons.map((skill) => (
-            <div className="flex flex-col items-center justify-evenly bg-slate-50 rounded p-3 shadow-lg opacity-90 w-1/2 m-auto">
+            <div className="flex flex-col items-center justify-evenly bg-slate-50 rounded p-3 shadow-lg opacity-90 w-40 m-auto">
               <img src={skill.imgSrc} alt="" className="w-24 h-24" />
               <p className="font-semibold text-l text-center text-slate-800">
                 {skill.name === "Tailwind CSS" ? "Tailwind" : skill.name}

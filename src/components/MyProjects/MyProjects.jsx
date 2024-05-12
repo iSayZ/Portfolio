@@ -89,7 +89,7 @@ function MyProjects() {
                 "../assets/projects/feet-n-fun/filter.png",
                 "../assets/projects/feet-n-fun/cart.png",
                 "../assets/projects/feet-n-fun/favorites.png",
-                "../assets/projects/feet-n-fun/responsive.png"
+                // "../assets/projects/feet-n-fun/responsive.png"
             ]
         },
         {
@@ -123,12 +123,12 @@ function MyProjects() {
 
     return (
         <>
-            <div id='my-projects' className="bg-cyan-500 w-full px-4 py-12 lg:py-20">
-                <h1 ref={title} className="text-slate-100 text-4xl font-semibold mb-12 lg:mb-16 text-center">Mes projets</h1>
+            <div id='my-projects' className="bg-cyan-500 w-full px-4 py-12 lg:py-16">
+                <h1 ref={title} className="text-slate-100 text-4xl font-semibold text-center">Mes projets</h1>
                 <div className="lg:flex lg:flex-wrap lg:justify-evenly lg:space-x-4">
                     {projects.map((project, index) => (
                         // div provenant du composant ProjectContainer pour assurer le maintien de l'animation
-                        <div className="mb-8 flex flex-col items-center bg-slate-900/50 rounded shadow-xl overflow-hidden lg:w-45% lg:flex-none"
+                        <div className="mt-16 flex flex-col items-center bg-slate-900/50 rounded shadow-xl overflow-hidden lg:w-45% lg:flex-none"
                             key={`${project.name}-${index}`}
                             ref={(element) => (projectRefs.current[index] = element)} // Ajout de la référence pour chaque projet
                         >

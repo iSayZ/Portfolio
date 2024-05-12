@@ -1,6 +1,7 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 import Gallery from "./Gallery";
+import { Button } from "@material-tailwind/react";
 
 function InformationProject ({ project, closePopup, informationProject }) {
 
@@ -17,7 +18,11 @@ function InformationProject ({ project, closePopup, informationProject }) {
                         <img src="../assets/images/icons/exit-btn-red.svg" alt="" className="mr-1 hover:bg-black/20 hover:rounded-md lg:h-14"/>
                     </button>
                 </div>
-                <a href={project.src} target="_blank" className="underline decoration-solid hover:opacity-50 lg:w-full lg:text-center lg:text-xl">Accéder au site vitrine</a>
+                <a href={project.src} target="_blank" className="lg:block lg:mx-96">
+                  <Button variant="gradient" color={project.color.other} className="">
+                    Accéder au site vitrine
+                  </Button>
+                </a>
                 <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none lg:w-45%"
                 autoplay="true"
                 autoplayDelay="10000"
