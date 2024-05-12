@@ -66,7 +66,10 @@ function InformationProject ({ project, closePopup, informationProject }) {
         </IconButton>
       )}>
                 {project.img.map((img, index) =>
-                        <img key={index} src={img} onClick={() => setImgSelect(index)} alt="" />
+                <>
+                        <img key={index} src={img} onClick={() => setImgSelect(index)} alt="" className="relative"/>
+                  <p className="opacity-0">.</p>
+                        </>
                 )}
                 </Carousel>
                 <div className="space-y-6 flex flex-col items-center justify-center lg:w-45%">
@@ -79,7 +82,7 @@ function InformationProject ({ project, closePopup, informationProject }) {
                         <div className="flex flex-wrap justify-center">
                         {project.techno.map((techno, index) =>
                             <button key={`${techno} + ${index}`} className={`p-2 m-2 bg-${project.color.other}-500`}>{techno}</button>
-                        )}
+                          )}
                         </div>
                     </div>
                     <hr className={`w-1/3 bg-${project.color.other}-500 h-1`}/>
@@ -99,6 +102,6 @@ function InformationProject ({ project, closePopup, informationProject }) {
         {/* <Gallery project={project}/> */}
         </div>
     )
-}
+  }
 
 export default InformationProject;

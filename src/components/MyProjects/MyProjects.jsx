@@ -88,8 +88,7 @@ function MyProjects() {
                 "../assets/projects/feet-n-fun/search.png",
                 "../assets/projects/feet-n-fun/filter.png",
                 "../assets/projects/feet-n-fun/cart.png",
-                "../assets/projects/feet-n-fun/favorites.png",
-                // "../assets/projects/feet-n-fun/responsive.png"
+                "../assets/projects/feet-n-fun/favorites.png"
             ]
         },
         {
@@ -98,7 +97,7 @@ function MyProjects() {
             techno: ["React", "JavaScript", "Tailwind CSS", "Responsive"],
             src: "https://estrine-alexis.vercel.app/",
             date: "Avril 2024",
-            color: {carouselBubble: "white", carouselArrow: "white", other: "cyan"},
+            color: {carouselBubble: "cyan-500", carouselArrow: "white", other: "cyan"},
             imgTop: 0,
             img: [
                 "../assets/projects/portfolio/accueil.png"
@@ -111,7 +110,7 @@ function MyProjects() {
             src: "https://alexoualexandre.github.io/lille-0224-projet1-trombinoscope/",
             date: "Mars 2024",
             time: "2 semaines",
-            color: {carouselBubble: "white", carouselArrow: "white", other: "pink"},
+            color: {carouselBubble: "pink-500", carouselArrow: "white", other: "pink"},
             imgTop: 0,
             img: [
                 "../assets/projects/trombi/index.png",

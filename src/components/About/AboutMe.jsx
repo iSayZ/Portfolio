@@ -103,7 +103,7 @@ function AboutMe() {
   return (
     <div
       id="about-me"
-      className="bg-slate-200 w-full h-full py-12 lg:py-20 lg:p-12 lg:px-40"
+      className="bg-slate-200 w-full h-full py-12 lg:py-20 lg:px-40"
     >
       <div className="text-center">
         <h1 ref={title} className="text-4xl font-semibold text-cyan-500 m-0">

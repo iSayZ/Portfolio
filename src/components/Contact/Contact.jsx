@@ -121,7 +121,7 @@ function Contact() {
                   Envoyer votre message
                   </Button>
                     </form>
-                        {formResponse !== "" && <p className={`text-center text-xl text-red-50 mt-8 rounded bg-${stateMessage}-500 py-2`}>{formResponse}</p>}
+                        {formResponse !== "" && <p className={`text-center text-xl text-red-50 mt-8 rounded bg-${stateMessage}-500 p-2`}>{formResponse}</p>}
                 </div>
             </div>
         </div>
