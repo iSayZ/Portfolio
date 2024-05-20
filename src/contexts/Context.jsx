@@ -15,7 +15,7 @@ export function MainProvider({ children }) {
           desc: "Site réalisé en équipe lors de l'évenement 'ProtoJam' de la Wild Code School, nous avions 24 heures pour développé un site autour du thème 'Nature & Déconnexion'. Ce site est donc une expérience fictive où vous pouvez découvrir 4 biomes de Minecraft où chaque membre de notre équipe propose une location de gite. Notre site à remporté le prix technique du concour ! (Site accessible seulement sur desktop)",
           techno: ["React", "JavaScript", "CSS"],
           src: "https://mineguide.vercel.app/",
-          gitSrc: "https://mineguide.vercel.app/",
+          gitSrc: "https://github.com/iSayZ/MineGuide-ProtoJam2024",
           date: "Mai 2024",
           time: "24 heures",
           color: {carouselBubble: "pink-500", carouselArrow: "pink", other:  "pink"},
@@ -46,7 +46,7 @@ export function MainProvider({ children }) {
           -Entièrement responsive`,
           techno: ["React", "JavaScript", "CSS", "API", "Responsive"],
           src: "https://feet-n-fun.vercel.app/",
-          gitSrc: "https://feet-n-fun.vercel.app/",
+          gitSrc: "https://github.com/WildCodeSchool-2024-02/JS-LILLE-0224-P2-G2-feet-n-fun/",
           date: "Avril 2024",
           time: "3 semaines",
           color: {carouselBubble: "orange-500", carouselArrow: "orange", other:  "orange"},
@@ -81,7 +81,7 @@ export function MainProvider({ children }) {
           desc: "Trombinoscope réalisé en équipe, mettant en valeur la promotion de la Wild Code School 2024.",
           techno: ["JavaScript", "HTML", "CSS", "Responsive"],
           src: "https://alexoualexandre.github.io/lille-0224-projet1-trombinoscope/",
-          gitSrc: "https://alexoualexandre.github.io/lille-0224-projet1-trombinoscope/",
+          gitSrc: "https://github.com/alexoualexandre/lille-0224-projet1-trombinoscope",
           date: "Mars 2024",
           time: "2 semaines",
           color: {carouselBubble: "pink-500", carouselArrow: "white", other: "pink"},
@@ -94,16 +94,9 @@ export function MainProvider({ children }) {
           key: ["all", "team"]
       }
   ];
-
-    // const openPopup = (indexProject) => {
-    //   setProjectSelect(indexProject);
-    //   setIsPopupOpen(true);
-    //   document.body.classList.add('overflow-hidden');
-    // };
   
     const openPopup = (idProject) => {
       const selectProject = projects.filter((project) => project.id === idProject)
-      console.log('ici', selectProject)
       setProjectSelect(selectProject[0]);
       setIsPopupOpen(true);
       document.body.classList.add('overflow-hidden');

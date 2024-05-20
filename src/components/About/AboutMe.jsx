@@ -10,6 +10,7 @@ function AboutMe() {
   gsap.registerPlugin(ScrollTrigger);
 
   const title = useRef(null);
+  const aboutContainer = useRef(null);
   const aboutMe = useRef(null);
   const btn = useRef(null);
   const skills = useRef(null);
@@ -18,9 +19,9 @@ function AboutMe() {
     gsap.config({
       nullTargetWarn: false
     });
-    
+
     gsap.fromTo(
-      title.current,
+      aboutContainer.current,
       {
         opacity: 0,
         y: 10,
@@ -37,9 +38,9 @@ function AboutMe() {
         },
       }
     );
-
+    
     gsap.fromTo(
-      aboutMe.current,
+      title.current,
       {
         opacity: 0,
         y: 10,
@@ -59,7 +60,7 @@ function AboutMe() {
     );
 
     gsap.fromTo(
-      btn.current,
+      aboutMe.current,
       {
         opacity: 0,
         y: 10,
@@ -68,6 +69,26 @@ function AboutMe() {
         opacity: 1,
         y: 0,
         delay: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#about-me",
+          start: "top center",
+          end: "bottom center",
+          markers: false,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      btn.current,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1.5,
         duration: 1,
         scrollTrigger: {
           trigger: "#about-me",
@@ -151,13 +172,17 @@ function AboutMe() {
   return (
     <div
       id="about-me"
-      className="bg-slate-200 w-full h-full py-12 lg:py-20 lg:px-40"
+      className="bg-slate-200 w-full h-full py-8 lg:py-20 lg:px-40"
+      ref={aboutContainer}
     >
-      <div className="text-center">
-        <h2 ref={title} className="text-4xl font-semibold text-cyan-500 m-0">
+      <div className="relative md:rounded md:shadow-xl md:bg-slate-50 md:bg-opacity-30 md:mb-20 md:w-5/6 p-6 m-auto">
+        <h2 ref={title} className="text-4xl font-semibold text-cyan-500 m-0 text-center md:mt-6 mb-14">
           Qui suis-je ?
         </h2>
-        <div ref={aboutMe} className="m-8 space-y-4 lg:leading-7 lg:text-l">
+        <div ref={aboutMe} className="mx-8 mb-12 space-y-4 lg:leading-7 lg:text-l">
+        <div className="w-44 rounded overflow-hidden shadow-xl m-auto mb-12 md:float-left md:mr-10 md:mb-8 relative">
+              <img src="../assets/profil2.png" alt="" className="" />
+            </div>
           <p>
           Passionné de technologie depuis toujours, je transforme aujourd'hui ma
           passion en devenant développeur web grâce à ma formation à la Wild
@@ -182,7 +207,7 @@ function AboutMe() {
           </p>
           <span id="about-end"></span>
           </div>        
-          <a ref={btn} href="https://www.estrine-alexis.fr/assets/CV_Alexis_ESTRINE.pdf/" target="_blank" className="block mb-12">
+          <a ref={btn} href="https://www.estrine-alexis.fr/assets/CV_Alexis_ESTRINE.pdf/" target="_blank" className="block mb-6 md:mb-12 text-center">
                   <Button variant="gradient" color="orange">
                     Voir mon CV
                   </Button>

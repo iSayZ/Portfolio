@@ -9,7 +9,6 @@ import {
     TabsBody,
     Tab,
     TabPanel,
-    TabsProps
   } from "@material-tailwind/react";
 
 function MyProjects() {
@@ -20,7 +19,6 @@ function MyProjects() {
     const title = useRef(null);
     const tabs = useRef(null)
     const projectsContainer = useRef(null)
-    const projectRefs = useRef([]);
 
     useEffect(() => {
         isPopupOpen ?
@@ -120,15 +118,15 @@ function MyProjects() {
         <>
             <div id='my-projects' className="bg-cyan-500 w-full px-4 py-12 lg:py-16">
                 <h2 ref={title} className="text-slate-100 text-4xl font-semibold text-center mb-12">Projets réalisés</h2>
-                <Tabs value="all">
-      <TabsHeader ref={tabs}>
+                <Tabs value="all" className="">
+      <TabsHeader ref={tabs} className="md:mx-60">
         {data.map(({ label, value }) => (
           <Tab key={value} value={value}>
             {label}
           </Tab>
         ))}
       </TabsHeader>
-      <TabsBody ref={projectsContainer}>
+      <TabsBody ref={projectsContainer} >
         {data.map(({ value }) => (
           <TabPanel key={value} value={value}>
             <div className="lg:flex lg:flex-wrap lg:justify-evenly ">

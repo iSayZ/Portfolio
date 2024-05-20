@@ -1,0 +1,197 @@
+import { useState } from "react";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Skills from "./Skills.jsx";
+import Skills2 from "./Skills2.jsx";
+import { Button } from "@material-tailwind/react";
+
+function AboutMe() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const title = useRef(null);
+  const aboutMe = useRef(null);
+  const btn = useRef(null);
+  const skills = useRef(null);
+
+  useEffect(() => {
+    gsap.config({
+      nullTargetWarn: false
+    });
+    
+    gsap.fromTo(
+      title.current,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#about-me",
+          start: "top center",
+          end: "bottom center",
+          markers: false,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      aboutMe.current,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.5,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#about-me",
+          start: "top center",
+          end: "bottom center",
+          markers: false,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      btn.current,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#about-me",
+          start: "top center",
+          end: "bottom center",
+          markers: false,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      skills.current,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.5,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#about-end",
+          start: "top center",
+          end: "bottom center",
+          markers: false,
+        },
+      }
+    );
+  }, []);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleToggle = () => {
+    setIsVisible(!isVisible);
+  };
+
+  let skillsIcons = [
+    {
+      name: "JavaScript",
+      imgSrc: "../../assets/skills-icons/icons8-javascript-144.svg",
+    },
+    {
+      name: "React",
+      imgSrc: "../../assets/skills-icons/icons8-react.svg",
+    },
+    {
+      name: "NodeJs",
+      imgSrc: "../../assets/skills-icons/icons8-nodejs-144.svg",
+    },
+    {
+      name: "Express",
+      imgSrc: "../../assets/skills-icons/icons8-express-js.svg",
+    },
+    {
+      name: "HTML",
+      imgSrc: "../../assets/skills-icons/icons8-html-5-144.svg",
+    },
+    {
+      name: "CSS",
+      imgSrc: "../../assets/skills-icons/icons8-css-144.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      imgSrc: "../../assets/skills-icons/icons8-tailwind-css-144.svg",
+    },
+    {
+      name: "MySql",
+      imgSrc: "../../assets/skills-icons/icons8-mysql-144.svg",
+    },
+    {
+      name: "Github",
+      imgSrc: "../../assets/skills-icons/icons8-github-150.svg",
+    },
+    // {
+    //   name: "MongoDB",
+    //   imgSrc: "../../assets/skills-icons/icons8-mongodb-144.svg",
+    // },
+  ];
+
+  return (
+    <div
+      id="about-me"
+      className="bg-slate-200 w-full h-full py-12 lg:py-20 lg:px-40"
+    >
+      <div className="text-center">
+        <h2 ref={title} className="text-4xl font-semibold text-cyan-500 m-0">
+          Qui suis-je ?
+        </h2>
+        <div ref={aboutMe} className="m-8 space-y-4 lg:leading-7 lg:text-l">
+          <p>
+          Passionné de technologie depuis toujours, je transforme aujourd'hui ma
+          passion en devenant développeur web grâce à ma formation à la Wild
+          Code School ! 🚀
+          </p>
+          <p>
+          Doté d'une solide compréhension des langages HTML,
+          CSS et JavaScript, je suis également en train d'explorer des
+          technologies avancées telles que React.js, Node.js, Express, MySQL,
+          Git, Github et d'autres. Avec une approche axée sur les meilleures
+          pratiques de développement (méthode Agile) et une volonté d'apprendre
+          continuellement, je suis prêt à relever les défis techniques
+          passionnants qui se présentent à moi.
+          </p>
+          <p>
+          Mon approche collaborative et ma capacité à apprendre rapidement me permettent de m'adapter aux
+          exigences changeantes du secteur. À la recherche d'opportunités pour
+          contribuer à des projets stimulants et pour élargir mes compétences en
+          développement web au sein d'une équipe dynamique. N’hésitez pas à me
+          contacter si mon profil vous intéresse, au plaisir de vous rencontrer
+          ! ✌️
+          </p>
+          <span id="about-end"></span>
+          </div>        
+          <a ref={btn} href="https://www.estrine-alexis.fr/assets/CV_Alexis_ESTRINE.pdf/" target="_blank" className="block mb-12">
+                  <Button variant="gradient" color="orange">
+                    Voir mon CV
+                  </Button>
+                </a>
+      </div>
+      <Skills skillsIcons={skillsIcons} skills={skills} />
+      <Skills2 skillsIcons={skillsIcons} skills={skills} />
+    </div>
+  );
+}
+
+export default AboutMe;
