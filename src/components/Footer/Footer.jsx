@@ -1,7 +1,36 @@
+import gsap from "gsap";
+import { useRef, useEffect } from "react";
+
 function Footer() {
+
+    const footer = useRef(null);
+
+    useEffect(
+        () =>  {
+            gsap.fromTo(
+                footer.current,
+                {
+                  opacity: 0,
+                  y: 10,
+                },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 1,
+                  scrollTrigger: {
+                    trigger: "#message",
+                    start: "bottom center",
+                    end: "bottom bottom",
+                    markers: false,
+                  },
+                }
+              );        }, 
+        []
+     );
+
     return (
-        <div className="bg-sky-950 w-full py-12 text-slate-50">
-            <div className="flex flex-col items-center">
+        <div className="bg-sky-950 w-full py-12 text-slate-50 relative">
+            <div ref={footer} className="relative flex flex-col items-center z-50">
                 <h2 className="font-semibold text-lg mb-4">Mes réseaux sociaux</h2>
                 <div className="flex justify-center space-x-3">
                     <a href="https://github.com/iSayZ/" target="_blank" className="hover:opacity-80 hover:scale-105">
