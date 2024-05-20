@@ -48,9 +48,9 @@ function Carrousel({ skillsIcons }) {
         ))}
       </Swiper> */}
       <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none lg:w-45%"
-                autoplay="true"
-                autoplayDelay="5000"
-                loop="true"
+                autoplay={true}
+                autoplayDelay={5000}
+                loop={true}
                 navigation={({ setActiveIndex, activeIndex, length }) => (
                     <div className="absolute bottom-2 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                       {new Array(length).fill("").map((_, i) => (
@@ -72,8 +72,8 @@ function Carrousel({ skillsIcons }) {
           onClick={handlePrev}
           className="!absolute top-2/4 left-4 -translate-y-2/4"
         >
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
 </svg>
         </IconButton>
       )}
@@ -85,13 +85,13 @@ function Carrousel({ skillsIcons }) {
           onClick={handleNext}
           className="!absolute top-2/4 !right-4 -translate-y-2/4"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
 </svg>
         </IconButton>
       )}>
-{skillsIcons.map((skill) => (
-            <div className="flex flex-col items-center justify-evenly bg-slate-50 rounded p-3 shadow-lg opacity-90 w-40 m-auto">
+{skillsIcons.map((skill, index) => (
+            <div key={`${skill.name} + ${index}`} className="flex flex-col items-center justify-evenly bg-slate-50 rounded p-3 shadow-lg opacity-90 w-40 m-auto">
               <img src={skill.imgSrc} alt="" className="w-24 h-24" />
               <p className="font-semibold text-l text-center text-slate-800">
                 {skill.name === "Tailwind CSS" ? "Tailwind" : skill.name}

@@ -3,13 +3,23 @@ import gsap from "gsap";
 import { useMain } from "../../contexts/Context";
 import ProjectContainer from "./ProjectContainer";
 import InformationProject from "./InformationProject";
+import {
+    Tabs,
+    TabsHeader,
+    TabsBody,
+    Tab,
+    TabPanel,
+    TabsProps
+  } from "@material-tailwind/react";
 
 function MyProjects() {
 
-    const { openPopup, closePopup, isPopupOpen, projectSelect } = useMain();
+    const { openPopup, closePopup, isPopupOpen, projectSelect, projects } = useMain();
 
     const informationProject = useRef(null);
     const title = useRef(null);
+    const tabs = useRef(null)
+    const projectsContainer = useRef(null)
     const projectRefs = useRef([]);
 
     useEffect(() => {
@@ -38,20 +48,19 @@ function MyProjects() {
             {
                 opacity: 1,
                 y: 0,
-                delay: 0.5,
+                delay: 0,
                 duration: 0.7,
                 scrollTrigger: {
-                    trigger: `#skills`,
-                    start: "center center",
-                    end: "center center",
+                    trigger: `#my-projects`,
+                    start: "top center",
+                    end: "top center",
                     markers: false,
                 },
             }
             );
 
-        projectRefs.current.forEach((ref, index) => {
             gsap.fromTo(
-                ref,
+                tabs.current,
                 {
                     opacity: 0,
                     y: 10,
@@ -59,7 +68,7 @@ function MyProjects() {
                 {
                     opacity: 1,
                     y: 0,
-                    delay: index * 0.5, // Délai pour chaque projet
+                    delay: 0.5,
                     duration: 0.7,
                     scrollTrigger: {
                         trigger: `#my-projects`,
@@ -68,78 +77,79 @@ function MyProjects() {
                         markers: false,
                     },
                 }
-            );
-        });
+                );
+
+                gsap.fromTo(
+                    projectsContainer.current,
+                    {
+                        opacity: 0,
+                        y: 10,
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        delay: 0.8,
+                        duration: 0.7,
+                        scrollTrigger: {
+                            trigger: `#my-projects`,
+                            start: "top center",
+                            end: "top center",
+                            markers: false,
+                        },
+                    }
+                    );
+
     }, [])
 
-    const projects = [
+    const data = [
         {
-            name: "Feet & Fun",
-            desc: "Site de e-commerce (vente de chaussettes), réalisé en équipe lors de ma formation à la Wild Code School.",
-            techno: ["React", "JavaScript", "CSS", "API", "Responsive"],
-            src: "https://feet-n-fun.vercel.app/",
-            date: "Avril 2024",
-            time: "3 semaines",
-            color: {carouselBubble: "orange-500", carouselArrow: "orange", other:  "orange"},
-            imgTop: 0,
-            img: [
-                "../assets/projects/feet-n-fun/shop.png",
-                "../assets/projects/feet-n-fun/product_details.png",
-                "../assets/projects/feet-n-fun/search.png",
-                "../assets/projects/feet-n-fun/filter.png",
-                "../assets/projects/feet-n-fun/cart.png",
-                "../assets/projects/feet-n-fun/favorites.png"
-            ]
+            label: "Tous",
+            value: "all"
         },
         {
-            name: "Portfolio",
-            desc: "Mon portfolio professionnel (site sur lequel vous naviguez).",
-            techno: ["React", "JavaScript", "Tailwind CSS", "Responsive"],
-            src: "https://estrine-alexis.vercel.app/",
-            date: "Avril 2024",
-            color: {carouselBubble: "cyan-500", carouselArrow: "white", other: "cyan"},
-            imgTop: 0,
-            img: [
-                "../assets/projects/portfolio/accueil.png"
-            ]
+            label: "En équipe",
+            value: "team"
         },
         {
-            name: "Trombinoscope",
-            desc: "Trombinoscope réalisé en équipe, mettant en valeur la promotion de la Wild Code School 2024.",
-            techno: ["JavaScript", "HTML", "CSS", "Responsive"],
-            src: "https://alexoualexandre.github.io/lille-0224-projet1-trombinoscope/",
-            date: "Mars 2024",
-            time: "2 semaines",
-            color: {carouselBubble: "pink-500", carouselArrow: "white", other: "pink"},
-            imgTop: 0,
-            img: [
-                "../assets/projects/trombi/index.png",
-                "../assets/projects/trombi/section.png",
-                "../assets/projects/trombi/card.png"
-            ]
+            label: "Seul",
+            value: "only"
         }
-    ];
+    ]
 
     return (
         <>
             <div id='my-projects' className="bg-cyan-500 w-full px-4 py-12 lg:py-16">
-                <h1 ref={title} className="text-slate-100 text-4xl font-semibold text-center">Mes projets</h1>
-                <div className="lg:flex lg:flex-wrap lg:justify-evenly lg:space-x-4">
-                    {projects.map((project, index) => (
+                <h2 ref={title} className="text-slate-100 text-4xl font-semibold text-center mb-12">Projets réalisés</h2>
+                <Tabs value="all">
+      <TabsHeader ref={tabs}>
+        {data.map(({ label, value }) => (
+          <Tab key={value} value={value}>
+            {label}
+          </Tab>
+        ))}
+      </TabsHeader>
+      <TabsBody ref={projectsContainer}>
+        {data.map(({ value }) => (
+          <TabPanel key={value} value={value}>
+            <div className="lg:flex lg:flex-wrap lg:justify-evenly ">
+                    {projects.filter((project) => project.key.includes(value.toString())).map((project, index) => (
                         // div provenant du composant ProjectContainer pour assurer le maintien de l'animation
-                        <div className="mt-16 flex flex-col items-center bg-slate-900/50 rounded shadow-xl overflow-hidden lg:w-45% lg:flex-none"
+                        <div className="mt-12 flex flex-col items-center bg-slate-900/50 rounded shadow-xl overflow-hidden lg:w-45% lg:flex-none"
                             key={`${project.name}-${index}`}
-                            ref={(element) => (projectRefs.current[index] = element)} // Ajout de la référence pour chaque projet
                         >
                             <ProjectContainer
                                 project={project}
-                                openPopup={() => openPopup(index)}
+                                openPopup={() => openPopup(project.id)}
                             />
                         </div>
                     ))}
                 </div>
+          </TabPanel>
+        ))}
+      </TabsBody>
+    </Tabs>
             </div>
-            {isPopupOpen && <InformationProject project={projects[projectSelect]} closePopup={closePopup} informationProject={informationProject} />}
+            {isPopupOpen && <InformationProject project={projectSelect} closePopup={closePopup} informationProject={informationProject} />}
         </>
     )
 }

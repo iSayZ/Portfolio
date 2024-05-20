@@ -16,13 +16,13 @@ function BurgerMenu({ handleToggle, burgerMenu }) {
           Contact
         </a>
         <svg onClick={handleToggle}
-          class="h-10 w-10 text-slate-50 hover:text-slate-400 hover:scale-110 cursor-pointer active:rotate-90 transition-all ease-in-out duration-200"
+          className="h-10 w-10 text-slate-50 hover:text-slate-400 hover:scale-110 cursor-pointer active:rotate-90 transition-all ease-in-out duration-200"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           {" "}
           <line x1="18" y1="6" x2="6" y2="18" />{" "}

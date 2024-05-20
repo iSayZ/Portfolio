@@ -22,15 +22,15 @@ function Navbar({ handleToggle }) {
         className="lg:hidden ml-3 p-0.5 hover:bg-sky-900 hover:rounded hover:shadow-md active:rotate-90 transition-all ease-in-out duration-200"
       >
         <svg
-          class="h-8 w-8 text-slate-200 cursor-pointer"
+          className="h-8 w-8 text-slate-200 cursor-pointer"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>

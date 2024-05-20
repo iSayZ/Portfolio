@@ -11,26 +11,36 @@ function InformationProject ({ project, closePopup, informationProject }) {
 
     return (
         <div className="fixed top-0 bottom-0 left-0 right-0 z-40 min-h-screen w-full overflow-auto translate-x-full" ref={informationProject}>
-            <div className=" bg-slate-50 h-full w-full rounded relative flex flex-col items-center justify-center px-4 pt-12 space-y-6 overflow-auto lg:flex-row lg:flex-wrap lg:justify-evenly">
-                <div className="absolute top-0 py-2 w-full flex justify-between items-center bg-slate-100 shadow">
+                <div className="relative top-0 p-2 w-full flex justify-between items-center bg-slate-100 shadow z-50 lg:h-1/6">
                     <h3 className={`ml-2 text-3xl font-semibold text-${project.color.other}-500 lg:text-5xl`}>{project.name}</h3>
                     <button onClick={closePopup}>
                         <img src="../assets/images/icons/exit-btn-red.svg" alt="" className="mr-1 hover:bg-black/20 hover:rounded-md lg:h-14"/>
                     </button>
                 </div>
-                <a href={project.src} target="_blank" className="lg:block lg:mx-96">
+            <div className="bg-slate-50 h-full w-full flex flex-col items-center px-4 py-8 space-y-6 lg:space-y-0 overflow-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:h-5/6">
+                <div className="lg:w-45%">
+                  <div className="w-full mb-8 flex flex-col items-center justify-center md:flex-row">
+                                  <a href={project.src} target="_blank" className="mx-4 mb-4 md:mb-0">
                   <Button variant="gradient" color={project.color.other} className="">
-                    Accéder au site vitrine
+                    Accéder au site vitrine 
                   </Button>
                 </a>
-                <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none lg:w-45%"
-                autoplay="true"
-                autoplayDelay="10000"
+                {project.gitSrc && 
+                <a href={project.gitSrc} target="_blank" className="mx-4">
+                  <Button variant="gradient" color={project.color.other} className="">
+                    Accéder au repo Github
+                  </Button>
+                </a>
+                }
+                  </div>
+                <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none"
+                autoplay={true}
+                autoplayDelay={10000}
                 navigation={({ setActiveIndex, activeIndex, length }) => (
                     <div className="absolute bottom-2 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                       {new Array(length).fill("").map((_, i) => (
                         <span
-                          key={i}
+                          key={`LazyMotion + ${i}`}
                           className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
                             activeIndex === i ? `w-8 bg-${project.color.carouselBubble}` : `w-4 bg-${project.color.carouselBubble} opacity-50`
                           }`}
@@ -47,8 +57,8 @@ function InformationProject ({ project, closePopup, informationProject }) {
           onClick={handlePrev}
           className="!absolute top-2/4 left-4 -translate-y-2/4"
         >
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
 </svg>
         </IconButton>
       )}
@@ -60,18 +70,19 @@ function InformationProject ({ project, closePopup, informationProject }) {
           onClick={handleNext}
           className="!absolute top-2/4 !right-4 -translate-y-2/4"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
 </svg>
         </IconButton>
       )}>
                 {project.img.map((img, index) =>
-                <>
-                        <img key={index} src={img} onClick={() => setImgSelect(index)} alt="" className="relative"/>
+                <span key={`${img} + ${index}`}>
+                        <img src={img} alt="" className="relative"/>
                   <p className="opacity-0">.</p>
-                        </>
+                        </span>
                 )}
                 </Carousel>
+                </div>
                 <div className="space-y-6 flex flex-col items-center justify-center lg:w-45%">
                     <p className="text-l text-center lg:w-2/3">{project.desc}</p>
                     <hr className={`w-1/3 bg-${project.color.other}-500 h-1`}/>
@@ -81,7 +92,7 @@ function InformationProject ({ project, closePopup, informationProject }) {
                         </h2>
                         <div className="flex flex-wrap justify-center">
                         {project.techno.map((techno, index) =>
-                            <button key={`${techno} + ${index}`} className={`p-2 m-2 bg-${project.color.other}-500`}>{techno}</button>
+                            <button key={`${techno} + ${index}`} className={`p-2 m-2 bg-${project.color.other}-500 shadow-md`}>{techno}</button>
                           )}
                         </div>
                     </div>

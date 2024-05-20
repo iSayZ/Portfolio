@@ -3,6 +3,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Skills from "./Skills.jsx";
+import Skills2 from "./Skills2.jsx";
 import { Button } from "@material-tailwind/react";
 
 function AboutMe() {
@@ -14,6 +15,10 @@ function AboutMe() {
   const skills = useRef(null);
 
   useEffect(() => {
+    gsap.config({
+      nullTargetWarn: false
+    });
+    
     gsap.fromTo(
       title.current,
       {
@@ -82,7 +87,7 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 0,
+        delay: 0.5,
         duration: 1,
         scrollTrigger: {
           trigger: "#about-end",
@@ -100,15 +105,58 @@ function AboutMe() {
     setIsVisible(!isVisible);
   };
 
+  let skillsIcons = [
+    {
+      name: "JavaScript",
+      imgSrc: "../../assets/skills-icons/icons8-javascript-144.svg",
+    },
+    {
+      name: "React",
+      imgSrc: "../../assets/skills-icons/icons8-react.svg",
+    },
+    {
+      name: "NodeJs",
+      imgSrc: "../../assets/skills-icons/icons8-nodejs-144.svg",
+    },
+    {
+      name: "Express",
+      imgSrc: "../../assets/skills-icons/icons8-express-js.svg",
+    },
+    {
+      name: "HTML",
+      imgSrc: "../../assets/skills-icons/icons8-html-5-144.svg",
+    },
+    {
+      name: "CSS",
+      imgSrc: "../../assets/skills-icons/icons8-css-144.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      imgSrc: "../../assets/skills-icons/icons8-tailwind-css-144.svg",
+    },
+    {
+      name: "MySql",
+      imgSrc: "../../assets/skills-icons/icons8-mysql-144.svg",
+    },
+    {
+      name: "Github",
+      imgSrc: "../../assets/skills-icons/icons8-github-150.svg",
+    },
+    // {
+    //   name: "MongoDB",
+    //   imgSrc: "../../assets/skills-icons/icons8-mongodb-144.svg",
+    // },
+  ];
+
   return (
     <div
       id="about-me"
       className="bg-slate-200 w-full h-full py-12 lg:py-20 lg:px-40"
     >
       <div className="text-center">
-        <h1 ref={title} className="text-4xl font-semibold text-cyan-500 m-0">
+        <h2 ref={title} className="text-4xl font-semibold text-cyan-500 m-0">
           Qui suis-je ?
-        </h1>
+        </h2>
         <div ref={aboutMe} className="m-8 space-y-4 lg:leading-7 lg:text-l">
           <p>
           Passionné de technologie depuis toujours, je transforme aujourd'hui ma
@@ -134,13 +182,14 @@ function AboutMe() {
           </p>
           <span id="about-end"></span>
           </div>        
-          <a href="https://drive.google.com/file/d/1iFZXXkv7Cxj5rTLxZ4uw3EUzjk4_HF1y/view?usp=sharing" target="_blank" className="block mb-12">
+          <a ref={btn} href="https://drive.google.com/file/d/1iFZXXkv7Cxj5rTLxZ4uw3EUzjk4_HF1y/view?usp=sharing" target="_blank" className="block mb-12">
                   <Button variant="gradient" color="orange">
                     Voir mon CV
                   </Button>
                 </a>
       </div>
-      <Skills skills={skills} />
+      <Skills skillsIcons={skillsIcons} skills={skills} />
+      <Skills2 skillsIcons={skillsIcons} skills={skills} />
     </div>
   );
 }
