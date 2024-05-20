@@ -179,7 +179,7 @@ function AboutMe() {
         <h2 ref={title} className="text-4xl font-semibold text-cyan-500 m-0 text-center md:mt-6 mb-14">
           Qui suis-je ?
         </h2>
-        <div ref={aboutMe} className="mx-8 mb-12 space-y-4 lg:leading-7 lg:text-l">
+        <div ref={aboutMe} className="text-center mx-8 mb-12 space-y-4 lg:leading-7 lg:text-l md:text-left">
         <div className="w-44 rounded overflow-hidden shadow-xl m-auto mb-12 md:float-left md:mr-10 md:mb-8 relative">
               <img src="../assets/profil2.png" alt="" className="" />
             </div>
