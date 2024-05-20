@@ -182,7 +182,7 @@ function AboutMe() {
           </p>
           <span id="about-end"></span>
           </div>        
-          <a ref={btn} href="https://drive.google.com/file/d/1iFZXXkv7Cxj5rTLxZ4uw3EUzjk4_HF1y/view?usp=sharing" target="_blank" className="block mb-12">
+          <a ref={btn} href="https://www.estrine-alexis.fr/assets/CV_Alexis_ESTRINE.pdf/" target="_blank" className="block mb-12">
                   <Button variant="gradient" color="orange">
                     Voir mon CV
                   </Button>
