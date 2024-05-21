@@ -19,8 +19,8 @@ function Footer() {
                   duration: 1,
                   scrollTrigger: {
                     trigger: "#email",
-                    start: "bottom center",
-                    end: "bottom bottom",
+                    start: "top center",
+                    end: "top bottom",
                     markers: false,
                   },
                 }

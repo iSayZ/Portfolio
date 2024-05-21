@@ -131,9 +131,9 @@ function Homepage() {
             </svg>
             </div> */}
             <div className="text-slate-50 text-2xl md:text-4xl space-y-8 flex flex-col items-center lg:items-start justify-center p-10 opacity-0 translate-y-5" ref={welcome}>
-                <p className="text-3xl md:text-6xl">Hello !</p>
-                <p className="text-3xl md:text-6xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">I'm Estrine Alexis,</p>
-                <p className="italic font-extralight text-center">a French full stack developer.</p>
+                <p className="text-3xl md:text-6xl">Bonjour !</p>
+                <p className="text-3xl md:text-6xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">Je suis Alexis Estrine,</p>
+                <p className="italic font-extralight text-center">développeur full stack JavaScript.</p>
                 <div className="flex flex-wrap justify-center md:justify-start opacity-0" ref={social} >
                 {socialNetwork.map((network) => <Button key={network.name} btn={network} />)}
             </div>

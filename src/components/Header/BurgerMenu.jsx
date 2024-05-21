@@ -4,13 +4,13 @@ function BurgerMenu({ handleToggle, burgerMenu }) {
     <div className="min-h-screen w-full fixed z-50 top-0 left-0 right-0 bottom-0 bg-sky-900 opacity-0 backdrop-blur flex justify-center -translate-x-full " ref={burgerMenu}>
       <div className="flex flex-col justify-center items-center text-slate-50 text-3xl space-y-6">
         <a className="hover:text-slate-400 hover:scale-110" href="#top" onClick={handleToggle}>
-          Index
+          Accueil
         </a>
         <a className="hover:text-slate-400 hover:scale-110" href="#about-me" onClick={handleToggle}>
-          About me
+          A propos
         </a>
         <a className="hover:text-slate-400 hover:scale-110" href="#my-projects" onClick={handleToggle}>
-          Projects
+          Projets
         </a>
         <a className="hover:text-slate-400 hover:scale-110" href="#contact" onClick={handleToggle}>
           Contact

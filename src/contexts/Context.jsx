@@ -12,7 +12,7 @@ export function MainProvider({ children }) {
       {
           id: 1,
           name: "MineGuide",
-          desc: "Site réalisé en équipe lors de l'évenement 'ProtoJam' de la Wild Code School, nous avions 24 heures pour développé un site autour du thème 'Nature & Déconnexion'. Ce site est donc une expérience fictive où vous pouvez découvrir 4 biomes de Minecraft où chaque membre de notre équipe propose une location de gite. Notre site à remporté le prix technique du concour ! (Site accessible seulement sur desktop)",
+          desc: "Site réalisé en équipe lors de l'événement 'ProtoJam' de la Wild Code School, un concours où nous avions 24 heures pour développer un site autour du thème 'Nature & Déconnexion'. Nous avons choisi de prendre le sujet à l’envers. En hommage à la période du Covid où nous nous sommes évadés à travers les jeux vidéo, nous avons choisi Minecraft ! Ce jeu emblématique nous plonge dans des environnements naturels tout en nous offrant une évasion totale de la réalité. Ce site est donc une expérience fictive où vous pouvez découvrir 4 biomes de Minecraft, où chaque membre de notre équipe propose une location de gîte. Ce projet a non seulement été un plaisir à créer, mais il a également été récompensé par le prix de la meilleure technique lors de l'événement ! 🏆",
           techno: ["React", "JavaScript", "CSS"],
           src: "https://mineguide.vercel.app/",
           gitSrc: "https://github.com/iSayZ/MineGuide-ProtoJam2024",

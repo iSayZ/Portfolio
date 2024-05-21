@@ -37,13 +37,13 @@ function Navbar({ handleToggle }) {
       </div>
       <nav className="hidden text-slate-50 text-xl space-x-10 lg:block opacity-0 -translate-y-10" ref={navbar}>
         <a className="hover:text-slate-400 inline-block hover:scale-105" href="#top">
-          Index
+          Accueil
         </a>
         <a className="hover:text-slate-400 inline-block hover:scale-105" href="#about-me">
-          About me
+          A propos
         </a>
         <a className="hover:text-slate-400 inline-block hover:scale-105" href="#my-projects">
-          Projects
+          Projets
         </a>
         <a className="hover:text-slate-400 inline-block hover:scale-105" href="#contact">
           Contact
