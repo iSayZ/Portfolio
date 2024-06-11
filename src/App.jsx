@@ -9,6 +9,7 @@ import Contact from "./components/Contact/Contact";
 import MyProjects from "./components/MyProjects/MyProjects";
 import Footer from "./components/Footer/Footer";
 import TopBtn from "./components/TopBtn/TopBtn";
+import { ThemeProvider } from "@material-tailwind/react";
 
 function App() {
 
@@ -36,14 +37,16 @@ function App() {
 
   return (
     <>
-      <MainProvider>
-        <Header />
-        <AboutMe />
-        <MyProjects />
-        <Contact />
-        <Footer />
-        <TopBtn topBtn={topBtn} />     
-      </MainProvider>
+      <ThemeProvider>
+        <MainProvider>
+          <Header />
+          <AboutMe />
+          <MyProjects />
+          <Contact />
+          <Footer />
+          <TopBtn topBtn={topBtn} />     
+        </MainProvider>
+      </ThemeProvider>
     </>  
   );
 }
