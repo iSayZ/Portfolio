@@ -67,6 +67,7 @@ export function MainProvider({ children }) {
           desc: "Mon portfolio professionnel (site sur lequel vous naviguez).",
           techno: ["React", "JavaScript", "Tailwind CSS", "Responsive"],
           src: "https://estrine-alexis.vercel.app/",
+          gitSrc: "https://github.com/iSayZ/Portfolio",
           date: "Avril 2024",
           color: {carouselBubble: "cyan-500", carouselArrow: "white", other: "cyan"},
           imgTop: 0,

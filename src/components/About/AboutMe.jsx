@@ -163,10 +163,10 @@ function AboutMe() {
       name: "Github",
       imgSrc: "../../assets/skills-icons/icons8-github-150.svg",
     },
-    // {
-    //   name: "MongoDB",
-    //   imgSrc: "../../assets/skills-icons/icons8-mongodb-144.svg",
-    // },
+    {
+      name: "Figma",
+      imgSrc: "../../assets/skills-icons/icons8-figma-144.svg",
+    },
   ];
 
   return (

@@ -11,7 +11,7 @@ function InformationProject ({ project, closePopup, informationProject }) {
 
     return (
         <div className="fixed top-0 bottom-0 left-0 right-0 z-40 min-h-screen w-full overflow-auto translate-x-full" ref={informationProject}>
-                <div className="relative top-0 p-2 w-full flex justify-between items-center bg-slate-100 shadow z-50 lg:h-1/6">
+                <div className="relative top-0 p-2 md:p-6 large-screen:p-10 w-full flex justify-between items-center bg-slate-100 shadow z-50 lg:h-1/6">
                     <h3 className={`ml-2 text-3xl font-semibold text-${project.color.other}-500 lg:text-5xl`}>{project.name}</h3>
                     <button onClick={closePopup}>
                         <img src="../assets/images/icons/exit-btn-red.svg" alt="" className="mr-1 hover:bg-black/20 hover:rounded-md lg:h-14"/>

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Homepage from "./Homepage";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import ParticlesBg from "./ParticlesBg";
 
 function Header() {
 
@@ -35,7 +34,6 @@ function Header() {
 
     return (
         <div className="bg-sky-950 w-full">
-            {/* <ParticlesBg /> */}
             <Navbar handleToggle={handleToggle} />
             <BurgerMenu handleToggle={handleToggle} burgerMenu={burgerMenu} />
             <Homepage />

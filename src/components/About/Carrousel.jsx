@@ -17,36 +17,6 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 function Carrousel({ skillsIcons }) {
   return (
     <>
-      {/* <Swiper
-        slidesPerView={'auto'}
-        centeredSlides={true}
-        spaceBetween={50}
-        navigation={true}
-        loop={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <Swiper
-        onSwiper={setSwiperRef}
-        slidesPerView={3}
-        centeredSlides={true}
-        spaceBetween={30}
-        navigation={true}
-        loop={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {skillsIcons.map((skill) => (
-          <SwiperSlide key={skill.name}>
-            <div className="flex flex-col items-center justify-evenly bg-slate-50 h-full w-full m-2 rounded p-3 shadow-lg opacity-90">
-              <img src={skill.imgSrc} alt="" className="w-24 h-24" />
-              <p className="font-semibold text-l text-center text-slate-800">
-                {skill.name === "Tailwind CSS" ? "Tailwind" : skill.name}
-              </p>
-            </div> 
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
       <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none lg:w-45%"
                 autoplay={true}
                 autoplayDelay={5000}

@@ -5,12 +5,6 @@ import { gsap } from 'gsap';
 function Homepage() {
 
     const socialNetwork = [
-    // {
-    //     name: "Facebook",
-    //     imgSrc: <svg class="h-4 w-4 text-slate-100"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>,
-    //     link: "http://facebook.com/",
-    //     target: "_blank"
-    // },
     {
         name: "Twitter",
         imgSrc: <svg className="h-4 w-4 text-slate-100"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497 -3.753C20.18 7.773 21.692 5.25 22 4.009z" /></svg> ,
@@ -63,73 +57,6 @@ function Homepage() {
     return (
         <>
             <div className="flex flex-col-reverse items-center h-auto lg:h-svh lg:flex-row lg:justify-evenly">
-                {/* ----------- animated bg ----------- */}
-            {/* <div className="absolute bottom-0 left-0 right-0">
-            <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                width="100%"
-                height="100%"
-                viewBox="0 0 1600 900"
-                preserveAspectRatio="xMidYMax slice"
-                className="animated-background"
-            >
-                <defs>
-                    <linearGradient id="bg">
-                        <stop offset="0%" style={{ stopColor: 'rgba(14, 165, 233, 0.06)' }} />
-                        <stop offset="50%" style={{ stopColor: 'rgba(14, 165, 233, 0.6)' }} />
-                        <stop offset="100%" style={{ stopColor: 'rgba(14, 165, 233, 0.2)' }} />
-                    </linearGradient>
-                    <path
-                        id="wave"
-                        fill="url(#bg)"
-                        d="M-363.852,502.589c0,0,236.988-41.997,505.475,0 s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
-                    />
-                </defs>
-                <g>
-                    <use xlinkHref="#wave" opacity=".3">
-                        <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="translate"
-                        dur="10s"
-                        calcMode="spline"
-                        values="270 230; -334 180; 270 230"
-                        keyTimes="0; .5; 1"
-                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
-                        repeatCount="indefinite"
-                        />
-                    </use>
-                    <use xlinkHref="#wave" opacity=".6">
-                        <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="translate"
-                        dur="8s"
-                        calcMode="spline"
-                        values="-270 230; 243 220; -270 230"
-                        keyTimes="0; .6; 1"
-                        keySplines="0.42, 0, 0.58, 1.0; 0.42, 0, 0.58, 1.0"
-                        repeatCount="indefinite"
-                        />
-                    </use>
-                    <use xlinkHref="#wave" opacity=".9">
-                        <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="translate"
-                        dur="6s"
-                        calcMode="spline"
-                        values="0 230; -140 200; 0 230"
-                        keyTimes="0; .4; 1"
-                        keySplines="0.42, 0, 0.58, 1.0; 0.42, 0, 0.58, 1.0"
-                        repeatCount="indefinite"
-                        />
-                    </use>
-                </g>
-            </svg>
-            </div> */}
             <div className="text-slate-50 text-2xl md:text-4xl space-y-8 flex flex-col items-center lg:items-start justify-center p-10 opacity-0 translate-y-5" ref={welcome}>
                 <p className="text-3xl md:text-6xl">Bonjour !</p>
                 <p className="text-3xl md:text-6xl text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text">Je suis Alexis Estrine,</p>

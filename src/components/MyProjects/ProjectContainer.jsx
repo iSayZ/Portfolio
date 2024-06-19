@@ -5,7 +5,7 @@ function ProjectContainer({ project, openPopup }) {
         <img
           src={project.img[project.imgTop]}
           alt=""
-          className="w-full h-full lg:h-60 xl:h-80 2xl:min-h-full object-fill lg:object-cover 2xl:object-fill rounded-tl-sm rounded-tr-sm"
+          className="w-full h-full lg:h-60 xl:h-80 2xl:min-h-full object-fill large-screen:object-cover large-screen:object-center lg:object-cover 2xl:object-fill rounded-tl-sm rounded-tr-sm"
         />
         <div
           onClick={openPopup}
