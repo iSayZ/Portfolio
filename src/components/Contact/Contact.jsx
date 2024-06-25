@@ -16,7 +16,7 @@ function Contact() {
           {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 0.5,
             scrollTrigger: {
               trigger: "#contact",
               start: "top center",

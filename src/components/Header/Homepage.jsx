@@ -39,17 +39,17 @@ function Homepage() {
         gsap.to(avatar.current, {
             opacity: 1,
             y: 0,
-            duration: 2
+            duration: 1
         }),
         gsap.to(welcome.current, {
             opacity: 1,
             y: 0,
-            duration: 2
+            duration: 1
         }),
         gsap.to(social.current, {
             opacity: 1,
             y: 0,
-            duration: 2,
+            duration: 1,
             delay: 1
         })
     }, [])

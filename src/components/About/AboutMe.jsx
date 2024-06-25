@@ -29,7 +29,7 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: {
           trigger: "#about-me",
           start: "top center",
@@ -48,8 +48,8 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 0.5,
-        duration: 1,
+        delay: 0,
+        duration: 0.5,
         scrollTrigger: {
           trigger: "#about-me",
           start: "top center",
@@ -68,7 +68,7 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 1,
+        delay: 0.7,
         duration: 1,
         scrollTrigger: {
           trigger: "#about-me",
@@ -89,7 +89,7 @@ function AboutMe() {
         opacity: 1,
         y: 0,
         delay: 1.5,
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: {
           trigger: "#about-me",
           start: "top center",
@@ -108,7 +108,7 @@ function AboutMe() {
       {
         opacity: 1,
         y: 0,
-        delay: 0.5,
+        delay: 0,
         duration: 1,
         scrollTrigger: {
           trigger: "#about-end",

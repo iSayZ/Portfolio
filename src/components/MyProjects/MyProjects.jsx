@@ -66,7 +66,7 @@ function MyProjects() {
                 {
                     opacity: 1,
                     y: 0,
-                    delay: 0.5,
+                    delay: 0,
                     duration: 0.7,
                     scrollTrigger: {
                         trigger: `#my-projects`,
