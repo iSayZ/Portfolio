@@ -167,6 +167,18 @@ function AboutMe() {
       name: "Figma",
       imgSrc: "../../assets/skills-icons/icons8-figma-144.svg",
     },
+    {
+      name: "Docker",
+      imgSrc: "../../assets/skills-icons/icons8-docker.svg",
+    },
+    {
+      name: "TypeScript",
+      imgSrc: "../../assets/skills-icons/icons8-typescript.svg",
+    },
+    {
+      name: "NestJs",
+      imgSrc: "../../assets/skills-icons/icons8-nestjs.svg",
+    },
   ];
 
   return (
