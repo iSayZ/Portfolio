@@ -11,11 +11,31 @@ export function MainProvider({ children }) {
     const projects = [
       {
         id: 1,
+        name: "Crumble",
+        desc: "Crumble est un réseau social inspiré de Facebook, que j'ai développé seul, avec un fort accent sur l'interactivité et la réactivité. Ce projet intègre des fonctionnalités d'authentification sécurisée avec JWT, une gestion complète des profils utilisateurs, ainsi qu'un système de messagerie instantanée via WebSocket. Les utilisateurs peuvent publier du contenu, commenter, liker, et gérer leurs amis, le tout dans une interface réactive et responsive. J'ai également mis en place un panneau d'administration pour la gestion des utilisateurs et des publications.",
+        techno: ["React", "Express", "MySQL", "WebSocket", "JWT"],
+        gitSrc: "https://github.com/iSayZ/Crumble",
+        date: "Septembre 2024",
+        time: "4 semaines",
+        color: {carouselBubble: "cyan-500", carouselArrow: "white", other: "cyan"},
+        imgTop: 1,
+        img: [
+            "../assets/projects/crumble/login.png",
+            "../assets/projects/crumble/index.png",
+            "../assets/projects/crumble/profile.png",
+            "../assets/projects/crumble/friend.png",
+            "../assets/projects/crumble/chat.png",
+            "../assets/projects/crumble/notification.png"
+        ],
+        key: ["all", "only"]
+      },
+      {
+        id: 2,
         name: "Spot Lille Art",
         desc: "Spot Lille Art est une plateforme participative permettant de référencer, partager et découvrir des œuvres de street art dans la Métropole Européenne de Lille. Le projet inclut la mise en place d'un CRUD et de routes d'API sécurisées, une authentification, une carte interactive, la prise et l'upload de photos, ainsi qu'un espace administrateur.",
         techno: ["React", "Express", "MySQL"],
         src: "https://spot-lille-art.utopland.net",
-        gitSrc: "https://github.com/WildCodeSchool-2024-02/LILLE-0224-P3-G2-streetart",
+        gitSrc: "https://github.com/iSayZ/Spot-Lille-Art",
         date: "Juillet 2024",
         time: "6 semaines",
         color: {carouselBubble: "cyan-500", carouselArrow: "white", other: "cyan"},
@@ -30,7 +50,7 @@ export function MainProvider({ children }) {
         key: ["all", "team"]
       },
       {
-          id: 2,
+          id: 3,
           name: "MineGuide",
           desc: "Site réalisé en équipe lors de l'événement 'ProtoJam' de la Wild Code School, un concours où nous avions 24 heures pour développer un site autour du thème 'Nature & Déconnexion'. Nous avons choisi de prendre le sujet à l’envers. En hommage à la période du Covid où nous nous sommes évadés à travers les jeux vidéo, nous avons choisi Minecraft ! Ce jeu emblématique nous plonge dans des environnements naturels tout en nous offrant une évasion totale de la réalité. Ce site est donc une expérience fictive où vous pouvez découvrir 4 biomes de Minecraft, où chaque membre de notre équipe propose une location de gîte. Ce projet a non seulement été un plaisir à créer, mais il a également été récompensé par le prix de la meilleure technique lors de l'événement ! 🏆 (Le site est optimisé uniquement pour les ordinateurs en raison de contraintes de temps)",
           techno: ["React", "JavaScript", "CSS"],
@@ -52,7 +72,7 @@ export function MainProvider({ children }) {
           key: ["all", "team", "small"]
       },
       {
-          id: 3,
+          id: 4,
           name: "Feet & Fun",
           desc: `Feet & Fun est un site de e-commerce (basé sur la vente de chausettes 🧦) réalisé en équipe.
           Nous avons créé notre propre API qui contient toutes les informations de nos 150 produits.
@@ -66,7 +86,7 @@ export function MainProvider({ children }) {
           -Entièrement responsive`,
           techno: ["React", "JavaScript", "CSS", "API", "Responsive"],
           src: "https://feet-n-fun.vercel.app/",
-          gitSrc: "https://github.com/WildCodeSchool-2024-02/JS-LILLE-0224-P2-G2-feet-n-fun/",
+          gitSrc: "https://github.com/iSayZ/Feet-Fun",
           date: "Avril 2024",
           time: "3 semaines",
           color: {carouselBubble: "orange-500", carouselArrow: "orange", other:  "orange"},
@@ -82,7 +102,7 @@ export function MainProvider({ children }) {
           key: ["all", "team"]
       },
       {
-          id: 4,
+          id: 5,
           name: "Portfolio",
           desc: "Mon portfolio professionnel (site sur lequel vous naviguez).",
           techno: ["React", "JavaScript", "Tailwind CSS", "Responsive"],
@@ -97,12 +117,12 @@ export function MainProvider({ children }) {
           key: ["all", "only"]
       },
       {
-          id: 5,
+          id: 6,
           name: "Trombinoscope",
           desc: "Trombinoscope réalisé en équipe, mettant en valeur la promotion de la Wild Code School 2024.",
           techno: ["JavaScript", "HTML", "CSS", "Responsive"],
-          src: "https://alexoualexandre.github.io/lille-0224-projet1-trombinoscope/",
-          gitSrc: "https://github.com/alexoualexandre/lille-0224-projet1-trombinoscope",
+          src: "https://trombi-wcs.vercel.app/",
+          gitSrc: "https://github.com/iSayZ/Trombinoscope-WCS",
           date: "Mars 2024",
           time: "2 semaines",
           color: {carouselBubble: "pink-500", carouselArrow: "white", other: "pink"},

@@ -20,18 +20,19 @@ function InformationProject ({ project, closePopup, informationProject }) {
             <div className="bg-slate-50 h-full w-full flex flex-col items-center px-4 py-8 space-y-6 lg:space-y-0 overflow-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:h-5/6">
                 <div className="lg:w-45%">
                   <div className="w-full mb-8 flex flex-col items-center justify-center md:flex-row">
-                                  <a href={project.src} target="_blank" className="mx-4 mb-4 md:mb-0">
-                  <Button variant="gradient" color={project.color.other} className="">
-                    Accéder au site vitrine 
-                  </Button>
-                </a>
-                {project.gitSrc && 
-                <a href={project.gitSrc} target="_blank" className="mx-4">
-                  <Button variant="gradient" color={project.color.other} className="">
-                    Accéder au repo Github
-                  </Button>
-                </a>
-                }
+                    {project.src && 
+                    <a href={project.src} target="_blank" className="mx-4 mb-4 md:mb-0">
+                      <Button variant="gradient" color={project.color.other} className="">
+                        Accéder au site vitrine 
+                      </Button>
+                    </a>}
+                    {project.gitSrc && 
+                    <a href={project.gitSrc} target="_blank" className="mx-4">
+                      <Button variant="gradient" color={project.color.other} className="">
+                        Accéder au repo Github
+                      </Button>
+                    </a>
+                    }
                   </div>
                 <Carousel className="rounded-l overflow-y-visible overflow-x-hidden h-auto flex-none"
                 autoplay={true}
