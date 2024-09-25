@@ -196,18 +196,10 @@ function AboutMe() {
               <img src="../assets/profil2.png" alt="" className="" />
             </div>
           <p>
-          Passionné de technologie depuis toujours, je transforme aujourd'hui ma
-          passion en devenant développeur web grâce à ma formation à la Wild
-          Code School ! 🚀
+          Développeur web passionné et compétent, je transforme ma passion pour la technologie en une carrière enrichissante. 🚀
           </p>
           <p>
-          Doté d'une solide compréhension des langages HTML,
-          CSS et JavaScript, je suis également en train d'explorer des
-          technologies avancées telles que React.js, Node.js, Express, MySQL,
-          Git, Github et d'autres. Avec une approche axée sur les meilleures
-          pratiques de développement (méthode Agile) et une volonté d'apprendre
-          continuellement, je suis prêt à relever les défis techniques
-          passionnants qui se présentent à moi.
+          Ayant acquis des compétences solides en JavaScript, React, Node.js et MySQL, et bien d'autres technologies. Je me consacre à la conception d'applications web dynamiques et innovantes. Avec une approche axée sur les meilleures pratiques de développement (méthode Agile) et une volonté d'apprendre continuellement, je suis prêt à relever les défis techniques passionnants qui se présentent à moi.
           </p>
           <p>
           Mon approche collaborative et ma capacité à apprendre rapidement me permettent de m'adapter aux
