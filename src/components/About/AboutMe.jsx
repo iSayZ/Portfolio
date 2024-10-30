@@ -136,7 +136,7 @@ function AboutMe() {
       imgSrc: "../../assets/skills-icons/icons8-react.svg",
     },
     {
-      name: "NodeJs",
+      name: "Node.js",
       imgSrc: "../../assets/skills-icons/icons8-nodejs-144.svg",
     },
     {
@@ -176,11 +176,11 @@ function AboutMe() {
       imgSrc: "../../assets/skills-icons/icons8-typescript.svg",
     },
     {
-      name: "NestJs",
+      name: "Nest.js",
       imgSrc: "../../assets/skills-icons/icons8-nestjs.svg",
     },
     {
-      name: "NextJs",
+      name: "Next.js",
       imgSrc: "../../assets/skills-icons/icons8-nextjs.svg",
     },
   ];
