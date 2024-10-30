@@ -179,6 +179,10 @@ function AboutMe() {
       name: "NestJs",
       imgSrc: "../../assets/skills-icons/icons8-nestjs.svg",
     },
+    {
+      name: "NextJs",
+      imgSrc: "../../assets/skills-icons/icons8-nextjs.svg",
+    },
   ];
 
   return (
