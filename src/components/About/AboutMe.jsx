@@ -183,6 +183,10 @@ function AboutMe() {
       name: "Next.js",
       imgSrc: "../../assets/skills-icons/icons8-nextjs.svg",
     },
+    {
+      name: "MongoDB",
+      imgSrc: "../../assets/skills-icons/icons8-mongodb-144.svg",
+    },
   ];
 
   return (
