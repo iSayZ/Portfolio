@@ -11,9 +11,30 @@ export function MainProvider({ children }) {
     const projects = [
       {
         id: 1,
+        name: "Dashboard de haute sécurité",
+        desc: "Mon projet de Dashboard de haute sécurité est une plateforme adaptable, conçue pour gérer le contenu sur plusieurs sites. Entièrement développé de manière autonome, ce dashboard intègre une authentification avancée (sessions sécurisées, tokens de rafraîchissement, 2FA) et permet de créer, éditer, et organiser des articles en toute simplicité. Il est également relié à Google Analytics pour un suivi précis des visites et des statistiques, offrant une interface réactive, responsive et sécurisée pour une gestion optimale du contenu et des performances du site.",
+        techno: ["Next.js", "Nest.js", "TypeScript", "MongoDB", "JWT"],
+        gitSrc: "https://github.com/iSayZ/Dashboard-Nest.js-Next.js",
+        date: "Septembre 2024",
+        time: "4 semaines",
+        color: {carouselBubble: "black", carouselArrow: "black", other: "gray"},
+        imgTop: 0,
+        img: [
+            "../assets/projects/dashboard/index.png",
+            "../assets/projects/dashboard/index-dark.png",
+            "../assets/projects/dashboard/2fa.png",
+            "../assets/projects/dashboard/table-article.png",
+            "../assets/projects/dashboard/add-article.png",
+            "../assets/projects/dashboard/order.png"
+        ],
+        key: ["all", "only"]
+      },
+      {
+        id: 2,
         name: "Crumble",
         desc: "Crumble est un réseau social inspiré de Facebook, que j'ai développé seul, avec un fort accent sur l'interactivité et la réactivité. Ce projet intègre des fonctionnalités d'authentification sécurisée avec JWT, une gestion complète des profils utilisateurs, ainsi qu'un système de messagerie instantanée via WebSocket. Les utilisateurs peuvent publier du contenu, commenter, liker, et gérer leurs amis, le tout dans une interface réactive et responsive. J'ai également mis en place un panneau d'administration pour la gestion des utilisateurs et des publications.",
         techno: ["React", "Express", "MySQL", "WebSocket", "JWT"],
+        src: "https://drive.google.com/file/d/1jPhKJag0I3d0YolTqbz-PhtQclcNMgrf/view",
         gitSrc: "https://github.com/iSayZ/Crumble",
         date: "Septembre 2024",
         time: "4 semaines",
@@ -30,7 +51,7 @@ export function MainProvider({ children }) {
         key: ["all", "only"]
       },
       {
-        id: 2,
+        id: 3,
         name: "Spot Lille Art",
         desc: "Spot Lille Art est une plateforme participative permettant de référencer, partager et découvrir des œuvres de street art dans la Métropole Européenne de Lille. Le projet inclut la mise en place d'un CRUD et de routes d'API sécurisées, une authentification, une carte interactive, la prise et l'upload de photos, ainsi qu'un espace administrateur.",
         techno: ["React", "Express", "MySQL"],
@@ -50,7 +71,7 @@ export function MainProvider({ children }) {
         key: ["all", "team"]
       },
       {
-          id: 3,
+          id: 4,
           name: "MineGuide",
           desc: "Site réalisé en équipe lors de l'événement 'ProtoJam' de la Wild Code School, un concours où nous avions 24 heures pour développer un site autour du thème 'Nature & Déconnexion'. Nous avons choisi de prendre le sujet à l’envers. En hommage à la période du Covid où nous nous sommes évadés à travers les jeux vidéo, nous avons choisi Minecraft ! Ce jeu emblématique nous plonge dans des environnements naturels tout en nous offrant une évasion totale de la réalité. Ce site est donc une expérience fictive où vous pouvez découvrir 4 biomes de Minecraft, où chaque membre de notre équipe propose une location de gîte. Ce projet a non seulement été un plaisir à créer, mais il a également été récompensé par le prix de la meilleure technique lors de l'événement ! 🏆 (Le site est optimisé uniquement pour les ordinateurs en raison de contraintes de temps)",
           techno: ["React", "JavaScript", "CSS"],
@@ -72,7 +93,7 @@ export function MainProvider({ children }) {
           key: ["all", "team", "small"]
       },
       {
-          id: 4,
+          id: 5,
           name: "Feet & Fun",
           desc: `Feet & Fun est un site de e-commerce (basé sur la vente de chausettes 🧦) réalisé en équipe.
           Nous avons créé notre propre API qui contient toutes les informations de nos 150 produits.
@@ -102,7 +123,7 @@ export function MainProvider({ children }) {
           key: ["all", "team"]
       },
       {
-          id: 5,
+          id: 6,
           name: "Portfolio",
           desc: "Mon portfolio professionnel (site sur lequel vous naviguez).",
           techno: ["React", "JavaScript", "Tailwind CSS", "Responsive"],
@@ -117,7 +138,7 @@ export function MainProvider({ children }) {
           key: ["all", "only"]
       },
       {
-          id: 6,
+          id: 7,
           name: "Trombinoscope",
           desc: "Trombinoscope réalisé en équipe, mettant en valeur la promotion de la Wild Code School 2024.",
           techno: ["JavaScript", "HTML", "CSS", "Responsive"],
