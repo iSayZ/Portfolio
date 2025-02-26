@@ -7,8 +7,8 @@
 ## 🖼️ Aperçu du Portfolio
 
 <div>
-  <a href="https://www.estrine-alexis.fr">
-    <img src="https://www.estrine-alexis.fr/assets/projects/portfolio/accueil.png" alt="Démo" width="400" />
+  <a href="https://portfolio-v1.estrine-alexis.fr">
+    <img src="https://portfolio-v1.estrine-alexis.fr/assets/projects/portfolio/accueil.png" alt="Démo" width="400" />
   </a>
 </div>
 
